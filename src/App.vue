@@ -1,14 +1,16 @@
 <template>
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <lotto-ball></lotto-ball>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LottoBall from './components/LottoBall.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    LottoBall
   }
 }
 </script>
