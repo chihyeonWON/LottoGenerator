@@ -6,7 +6,7 @@
     </div>
     <div>보너스 </div>
     <lotto-ball></lotto-ball>
-    <button>한번더!</button>
+    <button v-if="redo">한번더!</button>
   </div>
 </template>
 
@@ -20,7 +20,7 @@ export default {
   },
   data(){
     return{
-
+      redo:false,
     }
   },
   computed:{
