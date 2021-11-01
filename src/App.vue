@@ -1,6 +1,12 @@
 <template>
   <div>
+    <div>당첨 숫자</div>
+    <div id="결과창">
+      <lotto-ball></lotto-ball>
+    </div>
+    <div>보너스 </div>
     <lotto-ball></lotto-ball>
+    <button>한번더!</button>
   </div>
 </template>
 
@@ -23,11 +29,9 @@ export default {
   methods:{
 
   },
-  mounted:{
-
-  },
 }
 </script>
 
 <style>
+
 </style>
