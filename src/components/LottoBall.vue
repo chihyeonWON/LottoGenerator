@@ -8,9 +8,11 @@
 export default {
   name: 'LottoBall',
   data(){
-    
+      let background;
+    return{
+      background,
     }
-  }
+  },
 }
 </script>
 
