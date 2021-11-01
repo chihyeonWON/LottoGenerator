@@ -2,7 +2,7 @@
   <div>
     <div>당첨 숫자</div>
     <div id="결과창">
-      <lotto-ball></lotto-ball>
+      <lotto-ball v-for="ball in winBalls"></lotto-ball>
     </div>
     <div>보너스 </div>
     <lotto-ball></lotto-ball>
@@ -20,6 +20,7 @@ export default {
   },
   data(){
     return{
+      winBalls:[],
       redo:false,
     }
   },
