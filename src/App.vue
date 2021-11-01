@@ -9,7 +9,7 @@
     <button v-if="redo">한번더!</button>
   </div>
 </template>
-
+  
 <script>
 import LottoBall from './components/LottoBall.vue'
 

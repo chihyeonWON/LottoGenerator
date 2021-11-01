@@ -1,6 +1,6 @@
 <template>
-  <div>
-    
+  <div class="ball" :style="{background}">
+    {{ number }}
   </div>
 </template>
 
