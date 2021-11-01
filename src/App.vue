@@ -11,7 +11,21 @@ export default {
   name: 'App',
   components: {
     LottoBall
-  }
+  },
+  data(){
+    return{
+
+    }
+  },
+  computed:{
+
+  },
+  methods:{
+
+  },
+  mounted:{
+
+  },
 }
 </script>
 
