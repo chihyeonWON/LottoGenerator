@@ -32,7 +32,7 @@ export default {
   },
   data(){
     return{
-      winNumbers : getWinNumbers()
+      winNumbers : getWinNumbers(),
       winBalls:[],
       bonus:null,
       redo:false,
@@ -45,8 +45,12 @@ export default {
 
   },
   mounted() {
-    
-  }
+    for (let i =0; i< this.winNumbers.length - 1; i++) {
+      setTimeout(() => {
+        this.winBalls.push(this.winNumbers[i]);
+      },(i + 1) * 1000);
+    }
+  },
 }
 </script>
 
