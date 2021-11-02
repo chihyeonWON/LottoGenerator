@@ -28,11 +28,11 @@ import LottoBall from './components/LottoBall.vue'
 export default {
   name: 'App',
   components: {
-    LottoBall
+    LottoBall, // lotto-ball : LottoBall
   },
   data(){
     return{
-      winNumbers : getWinNumbers();
+      winNumbers : getWinNumbers()
       winBalls:[],
       bonus:null,
       redo:false,
