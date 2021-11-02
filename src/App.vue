@@ -49,6 +49,9 @@ export default {
       this.bonus = null;
       this.redo = false;
       // 초기화 후 다시 공을 뽑는다
+      this.showBalls();
+    },
+    showBalls() {
       // 7개 공
        for (let i =0; i< this.winNumbers.length - 1; i++) {
         setTimeout(() => {
@@ -63,17 +66,7 @@ export default {
     },
   },
   mounted() {
-    // 7개 공
-    for (let i =0; i< this.winNumbers.length - 1; i++) {
-      setTimeout(() => {
-        this.winBalls.push(this.winNumbers[i]);
-      },(i + 1) * 1000);
-    }
-    //보너스 공
-    setTimeout(() => {
-      this.bonus = this.winNumbers[6];
-      this.redo = true;
-    }, 7000)
+    this.showBalls();
   },
 }
 </script>
