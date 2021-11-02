@@ -1,6 +1,6 @@
 <template>
   <div class="ball" :style="{background}">
-    {{ numberData }}
+    {{ number }}
   </div>
 </template>
 
@@ -12,7 +12,6 @@ export default {
     let background;
     return{
       background,
-      numberData: this.number,
     }
   },
 }
