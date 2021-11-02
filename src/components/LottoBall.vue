@@ -1,16 +1,18 @@
 <template>
   <div class="ball" :style="{background}">
-    {{ number }}
+    {{ numberData }}
   </div>
 </template>
 
 <script>
 export default {
   name: 'LottoBall',
+  props:['number'],
   data(){
-      let background;
+    let background;
     return{
       background,
+      numberData: this.number,
     }
   },
 }
