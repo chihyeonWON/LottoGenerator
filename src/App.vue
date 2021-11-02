@@ -11,7 +11,8 @@
 </template>
   
 <script>
-  function getWinNumber() {
+//셔플정렬한 후 7개의 랜덤한 숫자를 뽑는 함수
+  function getWinNumbers() {
     console.log('getWinNumbers');
     const candidate = Array(45).fill().map((v,i) => i+1);
     const shuffle = [];
@@ -31,6 +32,7 @@ export default {
   },
   data(){
     return{
+      winNumbers : getWinNumbers();
       winBalls:[],
       bonus:null,
       redo:false,
