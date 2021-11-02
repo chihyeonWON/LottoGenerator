@@ -45,11 +45,17 @@ export default {
 
   },
   mounted() {
+    // 7개 공
     for (let i =0; i< this.winNumbers.length - 1; i++) {
       setTimeout(() => {
         this.winBalls.push(this.winNumbers[i]);
       },(i + 1) * 1000);
     }
+    //보너스 공
+    setTimeout(() => {
+      this.bonus = this.winNumbers[6];
+      this.redo = true;
+    }, 7000)
   },
 }
 </script>
