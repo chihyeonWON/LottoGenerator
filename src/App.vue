@@ -6,7 +6,7 @@
     </div>
     <div>보너스 </div>
     <lotto-ball v-if="bonus" :number="bonus"></lotto-ball>
-    <button v-if="redo">한번더!</button>
+    <button v-if="redo" @click="onClickRedo">한번더!</button>
   </div>
 </template>
   
@@ -42,7 +42,25 @@ export default {
 
   },
   methods:{
-
+    onClickRedo() {
+      //모든 값을 초기화
+      this.winNumbers = getWinNumbers();
+      this.winBalls = [];
+      this.bonus = null;
+      this.redo = false;
+      // 초기화 후 다시 공을 뽑는다
+      // 7개 공
+       for (let i =0; i< this.winNumbers.length - 1; i++) {
+        setTimeout(() => {
+          this.winBalls.push(this.winNumbers[i]);
+        },(i + 1) * 1000);
+      }
+      //보너스 공
+      setTimeout(() => {
+        this.bonus = this.winNumbers[6];
+        this.redo = true;
+      }, 7000)
+    },
   },
   mounted() {
     // 7개 공
