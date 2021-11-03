@@ -25,6 +25,7 @@
   }
 import LottoBall from './components/LottoBall.vue'
 
+const timeouts=[];
 export default {
   name: 'App',
   components: {
@@ -54,12 +55,12 @@ export default {
     showBalls() {
       // 7개 공
        for (let i =0; i< this.winNumbers.length - 1; i++) {
-        setTimeout(() => {
+        timeouts[i] = setTimeout(() => {
           this.winBalls.push(this.winNumbers[i]);
         },(i + 1) * 1000);
       }
       //보너스 공
-      setTimeout(() => {
+      timeouts[6] = setTimeout(() => {
         this.bonus = this.winNumbers[6];
         this.redo = true;
       }, 7000)
@@ -67,6 +68,11 @@ export default {
   },
   mounted() {
     this.showBalls();
+  },
+  beforeUnmount() {
+    timeouts.forEach((t) => {
+      clearTimeout(t);
+    });
   },
   watch:{
 
