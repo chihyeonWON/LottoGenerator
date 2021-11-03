@@ -1,6 +1,6 @@
 <template>
+  <Lotto-header></Lotto-header>
   <div>
-    <Lotto-header></Lotto-header>
     <div>당첨 숫자</div>
     <div id="결과창">
       <lotto-ball v-for="ball in winBalls" v-bind:number="ball" :key="ball"></lotto-ball>
@@ -89,5 +89,8 @@ export default {
 body{
   padding:0;
   margin:0;
+}
+div{
+  text-align:center;
 }
 </style>

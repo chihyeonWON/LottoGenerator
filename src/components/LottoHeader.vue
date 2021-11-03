@@ -1,7 +1,7 @@
 <template>
-    <div class="header">
+    <header>
         로또생성기
-    </div>
+    </header>
 </template>
 
 <script>
@@ -11,11 +11,9 @@
 </script>
 
 <style>
-    .header{
-        position:fixed;
-        background:skyblue;
-        width:100%;
-        margin:0 auto;
-        text-align:center;
-    }
+header{
+    background-color:skyblue;
+    text-align:center;  
+    margin-bottom:30px;
+}
 </style>
