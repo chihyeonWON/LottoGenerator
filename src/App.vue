@@ -9,6 +9,7 @@
     <lotto-ball v-if="bonus" :number="bonus"></lotto-ball>
     <button v-if="redo" @click="onClickRedo">한번더!</button>
   </div>
+  <Lotto-footer></Lotto-footer>
 </template>
   
 <script>
@@ -27,6 +28,7 @@
 
 import LottoHeader from './components/LottoHeader.vue'
 import LottoBall from './components/LottoBall.vue'
+import LottoFooter from './components/LottoFooter.vue'
 
 
 const timeouts=[];
@@ -35,6 +37,7 @@ export default {
   components: {
     LottoBall, // lotto-ball : LottoBall
     LottoHeader,
+    LottoFooter,
   },
   data(){
     return{
