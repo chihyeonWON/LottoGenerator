@@ -68,6 +68,9 @@ export default {
   mounted() {
     this.showBalls();
   },
+  watch:{
+
+  },
 }
 </script>
 
