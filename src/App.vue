@@ -1,6 +1,7 @@
 <template>
   <Lotto-header></Lotto-header>
   <div> 
+    
     <div>당첨 숫자</div>
     <div id="결과창">
       <lotto-ball v-for="ball in winBalls" v-bind:number="ball" :key="ball"></lotto-ball>
