@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Lotto-header></Lotto-header>
     <div>당첨 숫자</div>
     <div id="결과창">
       <lotto-ball v-for="ball in winBalls" v-bind:number="ball" :key="ball"></lotto-ball>
@@ -23,13 +24,17 @@
     const winNumbers = shuffle.slice(0, 6).sort((p,c) => p-c);
     return [...winNumbers, bonusNumber];
   }
+
+import LottoHeader from './components/LottoHeader.vue'
 import LottoBall from './components/LottoBall.vue'
+
 
 const timeouts=[];
 export default {
   name: 'App',
   components: {
     LottoBall, // lotto-ball : LottoBall
+    LottoHeader,
   },
   data(){
     return{
@@ -81,5 +86,8 @@ export default {
 </script>
 
 <style>
-
+body{
+  padding:0;
+  margin:0;
+}
 </style>
