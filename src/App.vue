@@ -1,11 +1,11 @@
 <template>
   <Lotto-header></Lotto-header>
-  <div>
+  <div> 
     <div>당첨 숫자</div>
     <div id="결과창">
       <lotto-ball v-for="ball in winBalls" v-bind:number="ball" :key="ball"></lotto-ball>
     </div>
-    <div>보너스 </div>
+    <div id="보너스창">보너스 </div>
     <lotto-ball v-if="bonus" :number="bonus"></lotto-ball>
     <button v-if="redo" @click="onClickRedo">한번더!</button>
   </div>
@@ -95,5 +95,11 @@ body{
 }
 div{
   text-align:center;
+}
+#결과창 {
+  margin:20px auto;
+}
+#보너스창 {
+  margin:20px auto;
 }
 </style>
