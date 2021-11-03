@@ -1,7 +1,7 @@
 <template>
   <Lotto-header></Lotto-header>
   <div> 
-    
+    <img src="./assets/lottogenerator.jpg">
     <div>당첨 숫자</div>
     <div id="결과창">
       <lotto-ball v-for="ball in winBalls" v-bind:number="ball" :key="ball"></lotto-ball>
@@ -102,5 +102,9 @@ div{
 }
 #보너스창 {
   margin:20px auto;
+}
+img{
+  width:100px;
+  height:100px;
 }
 </style>
