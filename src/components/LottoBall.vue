@@ -7,7 +7,9 @@
 <script>
 export default {
   name: 'LottoBall',
-  props:['number'],
+  props:{
+    number:Number,
+  },
   data(){
     let background;
     return{
